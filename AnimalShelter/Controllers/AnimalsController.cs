@@ -49,6 +49,23 @@ namespace AnimalShelter.Controllers
           var animalsByOrder = _dataBase.Animals.OrderByDescending(animals => animals.AnimalType).ToList();
           return View(animalsByOrder);
       }
+      [HttpPost]
+      public ActionResult SearchAnimalByName(string givenName)
+      {
+          Animal foundAnimal = _dataBase.Animals.Where(animals => animals.AnimalName==givenName).FirstOrDefault<Animal>();
+          if(foundAnimal==null)
+          {
+            return RedirectToAction("SearchAnimalByName");
+          }
+          return View("ShowFoundAnimal",foundAnimal);
+      }
+      [HttpGet]
+      public ActionResult SearchAnimalByName()
+      {
+          return View();
+      }
+      
+     
     // [HttpGet]
     //  public ActionResult ShowByOrder()
     //  {

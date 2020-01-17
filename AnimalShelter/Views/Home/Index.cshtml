@@ -1,4 +1,16 @@
-<h1>Welcome to the animal's shelter!</h1>
+
+@{
+  Layout = "_Layout";
+}
+<center>
+
+<h1>Welcome to the animal's shelter</h1>
+<br>
+<br>
+<hr />
+<br>
 <p>@Html.ActionLink("See all animals", "Index", "Animals")</p> 
 <p>@Html.ActionLink("List animals by descending order", "SortByDescendingOrder","Animals")</p>
 <p>@Html.ActionLink("List animals by ascending order", "SortByAscendingOrder","Animals")</p>
+<p>@Html.ActionLink("Search animal by name", "SearchAnimalByName","Animals")</p>
+</center>

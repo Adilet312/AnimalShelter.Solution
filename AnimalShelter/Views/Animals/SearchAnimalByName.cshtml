@@ -1,0 +1,13 @@
+@{
+  Layout = "_Layout";
+}
+@model AnimalShelter.Models.Animal
+<center>
+<h3>Search animal by name</h3>
+<form action="/animals/SearchAnimalByName" method="post">
+  <label for="givenName">PLease Enter name of the animal</label>
+  <input id="givenId" name="givenName" type="text">
+  <button type="submit" class="btn btn-info" >Find an animal</button>
+</form>
+</center>
+

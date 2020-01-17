@@ -1,9 +1,12 @@
+@{
+  Layout = "_Layout";
+}
 @using AnimalShelter.Models;
 @model List<AnimalShelter.Models.Animal>;
 <h1>Type of animals</h1>
 @if(Model.Count==0)
 {
-    <h3>There is no animals in our list.</h3>
+    <h4>There is no animals in our list.</h4>
 }
 <ul> 
   @foreach(Animal animals in Model)
@@ -11,6 +14,6 @@
       <li>@Html.ActionLink($"{animals.AnimalType}",  "Details", new { id = animals.AnimalId })</li>
   }
 </ul>
-
+<hr/>
 <p>@Html.ActionLink("Add new animal", "Create")</p>
 <p>@Html.ActionLink("Return Home Page", "Index","Home")</p>
