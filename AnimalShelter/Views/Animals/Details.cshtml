@@ -1,0 +1,12 @@
+@model AnimalShelter.Models.Animal
+
+<h2>Detail  about animal</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.AnimalType): @Html.DisplayFor(model => model.AnimalType)</h3>
+<h3>@Html.DisplayNameFor(model => model.AnimalName): @Html.DisplayFor(model => model.AnimalName)</h3>
+<h3>@Html.DisplayNameFor(model => model.AnimalGender): @Html.DisplayFor(model => model.AnimalGender)</h3>
+<h3>@Html.DisplayNameFor(model => model.AttandenceDate): @Html.DisplayFor(model => model.AttandenceDate)</h3>
+<h3>@Html.DisplayNameFor(model => model.Breed): @Html.DisplayFor(model => model.Breed)</h3>
+<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("List animals by descending order", "SortByAscendingOrder")</p>
+<p>@Html.ActionLink("List animals by ascending order", "SortByDescendingOrder")</p>
